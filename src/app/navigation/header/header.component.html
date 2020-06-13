@@ -1,0 +1,28 @@
+<mat-toolbar class="navbar">
+    <div fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div class="logo">
+        <a [routerLink]="['/dashboard']"><img src="https://nathangurarie.ga/img/Asset%202.svg" alt="logo" /></a>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+            <li>
+                <a [routerLink]="['/list']" routerLinkActive="active">Products</a>
+            </li>
+            <li>
+                <a [routerLink]="['/create']" routerLinkActive="active">Add New</a>
+            </li>
+            <li>
+                <a [routerLink]="['/my-cart']" routerLinkActive="active">My Cart</a>
+            </li>
+        </ul>
+    </div>
+    <div class="router-change-progress-bar">
+        <mat-progress-bar *ngIf="routeLoading" mode="indeterminate"></mat-progress-bar>
+    </div>
+    <app-cart-panel></app-cart-panel>
+
+</mat-toolbar>
