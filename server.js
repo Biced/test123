@@ -36,21 +36,11 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const bodyParser = require('body-parser');
-const productRoute = require('./api/routes/product');
-const cartRoute = require('./api/routes/carts');
 
 app.use(express.static(__dirname + '/dist/my-store-app'));
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname +
         '/dist/my-store-app/index.html'));
 });
-
-
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use('/api/product', productRoute);
-app.use('/api/cart', cartRoute);
 
 app.listen(process.env.PORT || 8080);
