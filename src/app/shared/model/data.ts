@@ -3,7 +3,7 @@ export class Product {
     title: string;
     Price: number;
     Description: string;
-    images: any[];
+    ImageLink: string;
     // comments: any[];
     category: string;
     CategoryName: string;
