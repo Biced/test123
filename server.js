@@ -24,7 +24,7 @@ const PORT = process.env.PORT || "https://school-store-app.herokuapp.com/" || 80
 
 app.use('/api/product', productRoute);
 app.use('/api/cart', cartRoute);
-app.use('/api/category', categoryRoute);
+// app.use('/api/category', categoryRoute);
 
 app.listen(PORT, () => {
     console.log(`Server listen from ${PORT}.....`);
