@@ -30,7 +30,7 @@ app.use('/api/category', categoryRoute);
 //     console.log(`Server listen from ${PORT}.....`);
 // });
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://<admin>:<admin1234>@ds141674.mlab.com:41674/heroku_pgrhkdk1', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://admin:admin1234@ds141674.mlab.com:41674/heroku_pgrhkdk1', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
