@@ -68,4 +68,8 @@ export class CardComponent implements OnInit, OnDestroy {
     );
   }
 
+  onImgError(event) {
+    event.target.src = 'https://image.freepik.com/free-vector/abstract-colorful-sales-background-concept_52683-32614.jpg';
+  }
+
 }

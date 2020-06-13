@@ -2,7 +2,7 @@
     <div class="product-image">
         <!-- [src]='product.images[0].url' -->
         <!-- src="https://cloud.githubusercontent.com/assets/878660/23353771/d0adbd12-fcd6-11e6-96be-7a236f8819d9.png" -->
-        <img alt="Denim Jeans" [src]='product.ImageLink'>
+        <img alt="Denim Jeans" [src]='product.ImageLink' (error)="onImgError($event)">
         <div class=" black-cover">
             <a [routerLink]="['/product/', product._id]" class="details-btn">Show Details</a>
             <!-- <button *ngIf="cartComponent" class="details-btn remove" (click)="removeCartItem(product)">Remove</button> -->
