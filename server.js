@@ -20,15 +20,15 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || "https://school-store-app.herokuapp.com/" || 8080;
 
 app.use('/api/product', productRoute);
 app.use('/api/cart', cartRoute);
 app.use('/api/category', categoryRoute);
 
-// app.listen(PORT, () => {
-//     console.log(`Server listen from ${PORT}.....`);
-// });
+app.listen(PORT, () => {
+    console.log(`Server listen from ${PORT}.....`);
+});
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://admin:admin1234@ds141674.mlab.com:41674/heroku_pgrhkdk1', {
     useNewUrlParser: true,
@@ -49,7 +49,7 @@ app.use(express.urlencoded({ extended: false }));
 //     app.use(express.static('client/build'));
 // }
 
-app.listen(PORT, console.log(`Server is starting at ${PORT}`));
+// app.listen(PORT, console.log(`Server is starting at ${PORT}`));
 
 // just a deploy test
 // const express = require('express');
