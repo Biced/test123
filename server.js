@@ -29,7 +29,7 @@ app.use('/api/cart', cartRoute);
 mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://heroku_pgrhkdk1:vfgJgiSAjF5IGMrM@cluster-pgrhkdk1.f971h.mongodb.net/SCHOOL DB?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
-}).catch(console.log(error));
+});
 
 
 const path = require('path');
