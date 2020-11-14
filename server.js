@@ -26,7 +26,7 @@ app.use('/api/product', productRoute);
 app.use('/api/cart', cartRoute);
 // app.use('/api/category', categoryRoute);
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://heroku_pgrhkdk1:1cdsb8un9kvhb93jg8ortjmbug@ds141674.mlab.com:41674/heroku_pgrhkdk1', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://heroku_pgrhkdk1:1cdsb8un9kvhb93jg8ortjmbug@cluster-pgrhkdk1.f971h.mongodb.net/cluster-pgrhkdk1?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
